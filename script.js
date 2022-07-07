@@ -7,6 +7,7 @@ var highest = document.querySelector('#maxTemp');
 var lowest = document.querySelector('#lowestTemp');
 var humidity = document.querySelector('#humid');
 var overall = document.querySelector('#overall');
+var errorLabel = document.querySelector("#errorLabel");
 
 document.getElementById('submitBTN').addEventListener("click", submitClick);
 document.getElementById('backArrow').addEventListener("click", goBack);
@@ -15,7 +16,7 @@ document.getElementById('backArrow').addEventListener("click", goBack);
 
 function submitClick(){
     if (input.value == ''){
-        alert("You need to enter a city name before submitting...");
+        errorLabel.textContent = "You need to enter a city name before submitting.";
         return;
     }
     if (!output[0].classList.contains('show'))
@@ -29,7 +30,11 @@ function submitClick(){
             lowest.textContent = data['main']['temp_min'];
             humidity.textContent = data['main']['humidity'] + "%";
             overall.textContent = data['weather'][0]['description'];
-        }).catch(err => alert("error loading api..")));
+            errorLabel.textContent = "";
+        }).catch(err => {
+            alert("error loading api..");
+            goBack();
+    }));
 }
 
 function goBack(){

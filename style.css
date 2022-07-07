@@ -1,0 +1,66 @@
+body{
+    text-align: center;
+    background-image: url('images/wallPaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    color: rgb(32, 146, 146);
+    padding-bottom: 50px;
+}
+.content{
+    margin-left: 35%;
+    margin-top: 50px;
+    width: 450px;
+    height: 400px;
+    background-color: rgb(61, 59, 59);
+    border-radius: 10px;
+}
+.inputs{
+    padding-top: 50px;
+    color: rgb(18, 105, 134);
+}
+.inputs input{
+    background-color: lightgray;
+}
+.inputs p{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#cityName{
+    width: 400PX;
+    height: 40px;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgb(32, 146, 146);
+}
+#submitBTN{
+    width: 100px;
+    height: 40px;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgb(32, 146, 146);
+}
+
+#submitBTN:hover{
+    background-color: rgb(18, 105, 134);
+}
+
+.output{
+    display: none;
+    color: rgb(18, 105, 134);
+    font-size: 22px;
+}
+.output h3{
+    font-size: 24px;
+}
+#backArrow{
+    position: left;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
